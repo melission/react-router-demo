@@ -38,9 +38,11 @@ function App() {
       </nav>
 
       {/* use *exact* otherwise all pathes starting with '/'' match */}
-      <Route exact path="/"><Home></Home></Route>
-      <Route path="/categpry"><Category></Category></Route>
-      <Route path="/products"><Products></Products></Route>
+      <Switch>
+        <Route exact path="/"><Home></Home></Route>
+        <Route path="/categpry"><Category></Category></Route>
+        <Route path="/products"><Products></Products></Route>
+      </Switch>
     </div>
   );
 }
