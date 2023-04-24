@@ -32,7 +32,7 @@ function App() {
             <Link to="/category">Category</Link>
           </li>
           <li>
-            <Link to="products">Products</Link>
+            <Link to="/products">Products</Link>
           </li>
         </ul>
       </nav>
