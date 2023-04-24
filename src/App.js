@@ -1,16 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
+import Category from './Category'
 
 const Home = () => (
   <div>
     <h2>Home</h2>
-  </div>
-);
-
-const Category = () => (
-  <div>
-    <h2>Category</h2>
   </div>
 );
 
@@ -37,11 +31,17 @@ function App() {
         </ul>
       </nav>
 
-      {/* use *exact* otherwise all pathes starting with '/'' match */}
+      {/* use *exact* otherwise all pathes starting with '/'' match
       <Routes>
-        <Route exact path="/"><Home></Home></Route>
-        <Route path="/categpry"><Category></Category></Route>
-        <Route path="/products"><Products></Products></Route>
+        <Route exact path="/"><Home /></Route>
+        <Route path="/categpry"><Category /></Route>
+        <Route path="/products"><Products /></Route>
+      </Routes> */}
+
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="category/" element={<Category />}></Route>
+        <Route path="products/" element={<Products />}></Route>
       </Routes>
     </div>
   );
