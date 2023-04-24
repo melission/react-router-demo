@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 
 const Home = () => (
   <div>
@@ -38,11 +38,11 @@ function App() {
       </nav>
 
       {/* use *exact* otherwise all pathes starting with '/'' match */}
-      <Switch>
+      <Routes>
         <Route exact path="/"><Home></Home></Route>
         <Route path="/categpry"><Category></Category></Route>
         <Route path="/products"><Products></Products></Route>
-      </Switch>
+      </Routes>
     </div>
   );
 }
