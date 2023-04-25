@@ -18,3 +18,5 @@ const productData = [
         status: "Not available",
     },
 ]
+
+export default productData;
