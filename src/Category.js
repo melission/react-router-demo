@@ -38,27 +38,27 @@ const Item = () => {
 
 const Category = () => {
 
-return (
-    <div>
-        <ul>
-            <li>
-                <Link to="shoes/*">Shoes</Link>
-            </li>
-            <li>
-                <Link to="boots/*">Boots</Link>
-            </li>
-            <li>
-                <Link to="footwear/*">Foorwear</Link>
-            </li>
-        </ul>
+    return (
+        <div> 
+            <ul>
+                <li>
+                    <Link to="shoes/*">Shoes</Link>
+                </li>
+                <li>
+                    <Link to="boots/*">Boots</Link>
+                </li>
+                <li>
+                    <Link to="footwear/*">Foorwear</Link>
+                </li>
+            </ul>
 
-        <Routes>
-            <Route path="shoes/*" element={<Item />} />
-            <Route path="boots/*" element={<Item />} />
-            <Route path="footwear/*" element={<Item />} />
-        </Routes>
-    </div>
-)
-}
+            {/* <Routes>
+                <Route path="shoes/*" element={<Item />} />
+                <Route path="boots/*" element={<Item />} />
+                <Route path="footwear/*" element={<Item />} />
+            </Routes> */}
+        </div>
+    )
+    }
 
 export default Category;
