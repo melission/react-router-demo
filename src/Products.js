@@ -1,14 +1,23 @@
 import React from "react";
 import {Link, Outlet, Route, Routes } from "react-router-dom";
 import productData from "./productData";
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 
 const Products = ({ match }) => {
     const linkList = productData.map((product) => {
         return (
-            <li key={product.id}>
-                <Link to={`${product.id}`}>{product.name}</Link>
-            </li>
+                <Card border="light" style={{ width: '18rem' }}>
+                <Card.Body>
+                  <Card.Title>{product.name}</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
+                  <Card.Text>
+                    Here is a quick product description: {product.description}
+                  </Card.Text>
+                  <Card.Link href={`/products/${product.id}`}>See detailes</Card.Link>
+                </Card.Body>
+              </Card>
         );
     });
 
@@ -16,7 +25,7 @@ const Products = ({ match }) => {
         <div>
             <div>
                 <h3>Products</h3>
-                <ul>{linkList}</ul>
+                <CardGroup>{linkList}</CardGroup>
             </div>
             <div>
                 <Outlet />
