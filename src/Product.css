@@ -1,0 +1,12 @@
+img {
+    margin: auto;
+}
+
+.product-desc {
+    height: 150px;
+    display: block;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    margin: auto;
+    overflow: scroll;
+}
