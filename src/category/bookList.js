@@ -1,0 +1,32 @@
+const classicBooks = [
+    { id: 1, bookName: "Pride and Prejudice", authorName: "Jane Austen" },
+    { id: 2, bookName: "To Kill a Mockingbird", authorName: "Harper Lee" },
+    { id: 3, bookName: "1984", authorName: "George Orwell" },
+    { id: 4, bookName: "The Great Gatsby", authorName: "F. Scott Fitzgerald" },
+    { id: 5, bookName: "Moby Dick", authorName: "Herman Melville" },
+    { id: 6, bookName: "Jane Eyre", authorName: "Charlotte Bronte" },
+    { id: 7, bookName: "The Catcher in the Rye", authorName: "J.D. Salinger" },
+    { id: 8, bookName: "Wuthering Heights", authorName: "Emily Bronte" },
+    { id: 9, bookName: "The Lord of the Rings", authorName: "J.R.R. Tolkien" },
+    { id: 10, bookName: "The Odyssey", authorName: "Homer" },
+    { id: 11, bookName: "Crime and Punishment", authorName: "Fyodor Dostoevsky" },
+    { id: 12, bookName: "Great Expectations", authorName: "Charles Dickens" },
+    { id: 13, bookName: "The Adventures of Huckleberry Finn", authorName: "Mark Twain" },
+    { id: 14, bookName: "War and Peace", authorName: "Leo Tolstoy" },
+    { id: 15, bookName: "Don Quixote", authorName: "Miguel de Cervantes Saavedra" },
+    { id: 16, bookName: "Anna Karenina", authorName: "Leo Tolstoy" },
+    { id: 17, bookName: "The Grapes of Wrath", authorName: "John Steinbeck" },
+    { id: 18, bookName: "The Canterbury Tales", authorName: "Geoffrey Chaucer" },
+    { id: 19, bookName: "The Scarlet Letter", authorName: "Nathaniel Hawthorne" },
+    { id: 20, bookName: "Ulysses", authorName: "James Joyce" },
+    { id: 21, bookName: "Catch-22", authorName: "Joseph Heller" },
+    { id: 22, bookName: "A Tale of Two Cities", authorName: "Charles Dickens" },
+    { id: 23, bookName: "The Brothers Karamazov", authorName: "Fyodor Dostoevsky" },
+    { id: 24, bookName: "Les Misérables", authorName: "Victor Hugo" },
+    { id: 25, bookName: "The Picture of Dorian Gray", authorName: "Oscar Wilde" },
+    { id: 26, bookName: "The Count of Monte Cristo", authorName: "Alexandre Dumas" },
+    { id: 27, bookName: "Frankenstein", authorName: "Mary Shelley" },
+    { id: 28, bookName: "The Iliad", authorName: "Homer" }
+]
+
+export default classicBooks;
