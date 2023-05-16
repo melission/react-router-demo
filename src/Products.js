@@ -3,6 +3,9 @@ import {Link, Outlet, Route, Routes } from "react-router-dom";
 import productData from "./productData";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import "./Products.css"
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row'
 
 const ShortDescription = ({ product }) => {
     let text = product.description
@@ -20,15 +23,19 @@ const ShortDescription = ({ product }) => {
 const Products = ({ match }) => {
     const linkList = productData.map((product) => {
         return (
-                <Card border="light" style={{ width: '18rem' }}>
+                <Card className="card-body" border="light" style={{ height: "400px" }}>
                 <Card.Body>
                   <Card.Title>{product.name}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
                   <Card.Text>
                     Here is a quick product description: <ShortDescription product={product} />
                   </Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
                   <Card.Link href={`/products/${product.id}`}>See detailes</Card.Link>
-                </Card.Body>
+                  </Card.Footer>
+
+
               </Card>
         );
     });
@@ -37,7 +44,13 @@ const Products = ({ match }) => {
         <div>
             <div>
                 <h3>Products</h3>
-                <CardGroup>{linkList}</CardGroup>
+                {/* <CardGroup className="card-deck">{linkList}</CardGroup> */}
+                <Container>
+                    <Row>
+                        {linkList}
+                    </Row>
+
+                </Container>
             </div>
             <div>
                 <Outlet />
