@@ -8,7 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Alert from 'react-bootstrap/Alert';
 import Button from "react-bootstrap/Button";
 import "./Product.css"
-import BreadcrumbProduct from "./breadcrumbs";
+import {BreadcrumbProduct} from "./breadcrumbs";
 
 const Status = ({product}) => {
     if (product.status === "Available") {
