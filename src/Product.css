@@ -5,8 +5,10 @@ img {
 .product-desc {
     height: 150px;
     display: block;
-    border: 1px solid blue;
+    width: 80%;
+    /* border: 1px solid blue; */
     box-sizing: border-box;
     margin: auto;
     overflow: scroll;
+    text-align: left;
 }
