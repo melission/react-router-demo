@@ -57,6 +57,44 @@ const productData = [
         
         In the end, Jasmine emerged from her healing journey a different person. She was stronger, more resilient, and more compassionate towards herself and others. And although the pain would never fully go away, she knew that she had the tools and support to continue living a meaningful and fulfilling life.`,
         status: "Available",
+    }, 
+    {
+        id: 6, 
+        name: "GRID vs Flex by GPT",
+        description: `
+
+        Both Grid and Flexbox are CSS layout systems that help developers create more complex and dynamic layouts. However, they differ in terms of their approach and functionality.
+        
+        CSS Grid is a two-dimensional layout system that allows you to create complex layouts by defining rows and columns. It enables you to create a grid of rows and columns, and then place elements into those rows and columns using the grid-template-rows, grid-template-columns, and grid-template-areas properties. CSS Grid provides more control over the placement and sizing of elements than Flexbox, and it is particularly useful for creating complex grid layouts with multiple columns and rows.
+        
+        Flexbox, on the other hand, is a one-dimensional layout system that is designed to help you create flexible and responsive layouts. It enables you to define a flexible container and align and distribute its child elements along a single axis. Flexbox is useful for creating layouts where elements need to be organized in a row or a column and where you need to control the alignment, distribution, and order of those elements.
+        
+        In summary, Grid is used for two-dimensional layout while Flexbox is used for one-dimensional layout. Grid is ideal for complex layouts with multiple rows and columns, while Flexbox is great for creating simple, flexible layouts along a single axis.`,
+        status: "Available",
+    },
+    {
+        id: 7,
+        name: "the actual vs shadow DOM by GPT",
+        description: `The actual DOM (Document Object Model) represents the structure of an HTML document as a tree of nodes that can be accessed, manipulated, and updated using JavaScript. When you create an HTML element, the browser generates a corresponding node in the actual DOM. The actual DOM is what you see in the browser's developer tools when you inspect a web page.
+
+        Shadow DOM, on the other hand, is a separate DOM tree that is attached to an HTML element, usually a custom web component. This separate DOM tree is hidden from the main document's DOM tree, which means that the styles and structure defined in the shadow DOM do not affect the main document's styles and structure. This encapsulation allows developers to create custom web components that behave like native HTML elements but with their own internal structure and styling.
+        
+        The key difference between shadow DOM and the actual DOM is that the actual DOM is a single, global tree of nodes that represents the entire document, while shadow DOM is a local tree of nodes that represents a specific part of the document. When you manipulate the actual DOM using JavaScript, any changes you make can affect the entire document, whereas when you manipulate the shadow DOM, the changes are isolated to the web component associated with the shadow DOM.
+        
+        In summary, the actual DOM represents the entire structure of the HTML document, while the shadow DOM is a separate tree of nodes that is attached to an HTML element and provides encapsulation and isolation for web components.`,
+        status: "Available",
+    },
+    {
+        id: 8,
+        name: "Vertical alignment in CSS",
+        description: `...`,
+        status: "Available",
+    },
+    {
+        id: 9,
+        name: "9",
+        description: "...",
+        status: "Available",
     }
 ]
 
