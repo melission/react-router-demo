@@ -1,0 +1,16 @@
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid green;
+}
+
+.card-body {
+    min-width: 15rem;
+    max-width: 15rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    
+}
