@@ -24,18 +24,16 @@ const Products = ({ match }) => {
     const linkList = productData.map((product) => {
         return (
                 <Card className="card-body" border="light" style={{ height: "400px" }}>
-                <Card.Body>
-                  <Card.Title>{product.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
-                  <Card.Text className="card-desc">
-                    Here is a quick product description: <ShortDescription product={product} />
-                  </Card.Text>
-                  </Card.Body>
-                  <Card.Footer>
-                  <Card.Link href={`/products/${product.id}`}>See detailes</Card.Link>
-                  </Card.Footer>
-
-
+                    <Card.Body>
+                        <Card.Title>{product.name}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
+                        <Card.Text className="card-desc">
+                            Here is a quick product description: <ShortDescription product={product} />
+                        </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                        <Card.Link href={`/products/${product.id}`}>See detailes</Card.Link>
+                    </Card.Footer>
               </Card>
         );
     });
