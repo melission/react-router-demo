@@ -3,9 +3,9 @@ import {Link, Outlet, Route, Routes } from "react-router-dom";
 import productData from "./productData";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import "./Products.css"
+import "./styles.css"
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row'
+import Row from 'react-bootstrap/Row';
 
 const ShortDescription = ({ product }) => {
     let text = product.description
@@ -27,7 +27,7 @@ const Products = ({ match }) => {
                 <Card.Body>
                   <Card.Title>{product.name}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
-                  <Card.Text>
+                  <Card.Text className="card-desc">
                     Here is a quick product description: <ShortDescription product={product} />
                   </Card.Text>
                   </Card.Body>
