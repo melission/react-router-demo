@@ -1,8 +1,7 @@
 import React from "react";
-import {Link, Outlet, Route, Routes } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import productData from "./productData";
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import "./styles.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -42,22 +41,15 @@ const Products = ({ match }) => {
         <div>
             <div>
                 <h3>Products</h3>
-                {/* <CardGroup className="card-deck">{linkList}</CardGroup> */}
                 <Container>
                     <Row>
                         {linkList}
                     </Row>
-
                 </Container>
             </div>
             <div>
                 <Outlet />
             </div>
-            {/* <Routes>
-                <Route path=":id" element={<Product data={productData}></Product>}></Route>
-                <Route path="/"><p>Select a product.</p></Route>
-            </Routes> */}
-
         </div>
     )
 }
