@@ -2,11 +2,26 @@
 .card-body {
     min-width: 15rem;
     max-width: 15rem;
+    margin: 5px;
 }
 
 .card-desc {
     text-align: left;
 
+}
+
+.card-block {
+    justify-content: center;
+    /* border: 1px solid purple; */
+}
+
+.pagination-block {
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.pagination-element {
+    width: 90px;
 }
 
 @media only screen and (max-width: 600px) {
