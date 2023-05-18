@@ -17,13 +17,14 @@ const BreadcrumbProduct = ({product}) => {
     );
 }
 
-const BreadcrumbCategory = ({}) => {
+const BreadcrumbCategory = ({book}) => {
     return (
         <Breadcrumb>
             <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
             <Breadcrumb.Item href={`/category`}>
                 Category
             </Breadcrumb.Item>
+            <Breadcrumb.Item active>{book}</Breadcrumb.Item>
         </Breadcrumb>
     )
 }
