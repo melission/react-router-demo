@@ -1,7 +1,12 @@
 
+.App {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .card-body {
-    min-width: 15rem;
-    max-width: 15rem;
+    min-width: 16rem;
+    max-width: 16rem;
+    height: 11rem;
     margin: 5px;
 }
 
@@ -15,16 +20,88 @@
     /* border: 1px solid purple; */
 }
 
+.card-title {
+    margin-left: -39px;
+    margin-top: -20px;
+    width: 14rem;
+    height: 37px;
+    /* text-align: center; */
+    /* border: 1px solid yellow; */
+}
+
+.card-text {
+    margin-left: -40px;
+    width: 14rem;
+    /* border: 1px solid blue; */
+}
+
 .pagination-block {
     justify-content: center;
-    padding-top: 10px;
+    /* padding: 10px 0 0 0; */
+    /* padding-top: 10px; */
+    display: flex;
+    width: 10000px;
+    height: 90px;
+    /* margin-left: -10px; */
+    /* margin: 0 0 -10px 0; */
+    /* border: 1px solid cadetblue; */
+    /* background-color: ; */
+    /* background-color: rgba(40, 37, 30, 0.5); */
+    /* z-index: -1; */
 }
 
 .pagination-element {
-    width: 90px;
+    width: 95px;
 }
 
-@media only screen and (max-width: 600px) {
+.container-body {
+    /* height: 80vh;
+    border: 1px solid red; */
+    /* padding-top: 7rem; */
+
+}
+
+.pagination {
+    position: fixed;
+    bottom: 10px;
+    margin-left: 15px;
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+ 
+.book-section_title {
+    width: 80%;
+    padding: 20px 0 0 0;
+    margin: auto;
+} 
+
+.book-section_description {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1200px ) {
+    .pagination {
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .pagination-block {
+        background-color: rgba(184, 182, 182, 0.5);
+        /* border: 1px solid blue; */
+        /* padding-left: -15px; */
+    }
+
+    
+    .container-body {
+        padding-bottom: 8rem;
+    }
 
     
 }
