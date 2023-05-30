@@ -10,6 +10,7 @@ import Products from './Products';
 import Product from './Product';
 import Books from './category/Books';
 import Book from "./category/Book";
+import Factory from './Factory';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,12 @@ const router = createBrowserRouter([
       {
         path: "category/books/:bookID",
         element: <Book />
-      }
+      },
+      {
+        path: "factory",
+        element: <Factory />
+      },
+
     ]
   }
 ])
