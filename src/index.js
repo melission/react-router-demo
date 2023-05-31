@@ -11,6 +11,7 @@ import Product from './Product';
 import Books from './category/Books';
 import Book from "./category/Book";
 import Factory from './Factory';
+import Login from './Login';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "factory",
         element: <Factory />
+      },
+      {
+        path: "login/",
+        element: <Login />
       },
 
     ]
