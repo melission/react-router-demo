@@ -24,7 +24,7 @@ const Products = ({ match }) => {
         return (
                 <Card className="card-body" border="light" style={{ height: "400px" }}>
                     <Card.Body>
-                        <Card.Title>{product.name}</Card.Title>
+                        <Card.Title style={{height: "100px"}}>{product.name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
                         <Card.Text className="card-desc">
                             Here is a quick product description: <ShortDescription product={product} />
