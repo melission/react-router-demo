@@ -31,7 +31,7 @@ const Login = () => {
   return (
         <Container className='login-container'>
             <Row>
-                <Form onSubmit={handleLogin}>
+                <Form className='login-form' onSubmit={handleLogin}>
                     <Form.Group className="mb-2" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control id="email" value={email} onChange={handleEmailChange} type="email" placeholder="Enter email" />
