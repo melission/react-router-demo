@@ -34,6 +34,7 @@ function App() {
             <Nav.Link href={`/category/`}>Category</Nav.Link>
             <Nav.Link href={`/products/`}>Products</Nav.Link>
             <Nav.Link href={`/factory/`}>Factory</Nav.Link>
+            <Nav.Link href={`/login/`} >Log in</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
