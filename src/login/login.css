@@ -1,0 +1,17 @@
+.login-container {
+    /* border: 1px solid red; */
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.login-form {
+    margin: auto;
+    width: 30%;
+}
+
+
+@media screen and (max-width: 1000px ) {
+    .login-form {
+        width: 70%;
+    }
+}
