@@ -3,7 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
-import "./styles.css"
+import "./login.css"
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -28,10 +29,10 @@ const Login = () => {
   };
 
   return (
-        <Container className='container-body'>
+        <Container className='login-container'>
             <Row>
                 <Form onSubmit={handleLogin}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-2" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control id="email" value={email} onChange={handleEmailChange} type="email" placeholder="Enter email" />
                         <Form.Text className="text-muted">
@@ -39,7 +40,7 @@ const Login = () => {
                         </Form.Text>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-2" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control id="password" value={password} onChange={handlePasswordChange} type="password" placeholder="Password" />
                     </Form.Group>
