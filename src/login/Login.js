@@ -3,12 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
+import Spinner from 'react-bootstrap/Spinner';
 import "./login.css"
 
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -20,8 +23,16 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     // Perform login logic here, e.g., sending username and password to a server
+
+    // Simulating a delay of 2 seconds
+    setTimeout(() => {
+      setIsLoading(false);
+      setEmail('');
+      setPassword('');
+    }, 2000);
 
     // Reset form fields
     setEmail('');
@@ -47,8 +58,21 @@ const Login = () => {
                     {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group> */}
-                    <Button variant="primary" type="submit">
-                    Submit
+                    <Button className='login-button' variant="primary" type="submit" disabled={isLoading}>
+                    {isLoading ? (
+                      <>
+                        <Spinner
+                          as="span"
+                          animation="grow"
+                          size="sm"
+                          role="status"
+                          aria-hidden="true"
+                        />
+                        Loading...
+                      </>
+                    ) : (
+                      'Login'
+                    )}
                     </Button>
                 </Form>
             </Row>
