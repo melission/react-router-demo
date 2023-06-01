@@ -58,7 +58,7 @@ const Login = () => {
                     {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group> */}
-                    <Button className='login-button' variant="primary" type="submit" disabled={isLoading}>
+                    <Button className='login-button' variant="outline-primary" type="submit" disabled={isLoading}>
                     {isLoading ? (
                       <>
                         <Spinner
