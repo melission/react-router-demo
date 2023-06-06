@@ -89,12 +89,12 @@ const Product = ( ) => {
         productInfo = <h2>Sorry. The product doesn't excist.</h2>
     }
 
-    let currentID = product.id
-    console.log("before return", currentID)
+    // let currentID = product.id
+    // console.log("before return", currentID)
     return (
         <div>
             <div class="product-breadcrumbs">
-                <BreadcrumbProduct current={currentID}></BreadcrumbProduct>
+                <BreadcrumbProduct current={productID}></BreadcrumbProduct>
             </div>
             <div>{productInfo}</div>
         </div>
