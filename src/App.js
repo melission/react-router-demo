@@ -1,7 +1,5 @@
 import './App.css';
-import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import Category from './Category';
-import Products from "./Products";
+import {Outlet} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
