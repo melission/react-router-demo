@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import { classicBooks } from "./bookList";
 import { useParams } from "react-router-dom";
+import authors from "./authorList";
 import "./books.css"
 
 function getRandomRating(min, max) {
@@ -15,6 +16,7 @@ const Book = () => {
     //useParams fetches the route and returns an ID
     const {bookID} = useParams();
     const book = classicBooks.find(b => b.id === Number(bookID))
+    const author = authors.find(author => author.name === String(book.authorName))
     const rating = getRandomRating(1, 5);
     const reviewNumber = Math.floor(Math.random() * 100);
 
@@ -29,6 +31,8 @@ const Book = () => {
                 <h3>{book.authorName}</h3>
                 <p>The book rating: {rating} based on {reviewNumber} reviews. </p>
                 <div>[all the numbers are generated randomly]</div>
+
+                <p>{author.description}</p>
 
 
         </Container>
