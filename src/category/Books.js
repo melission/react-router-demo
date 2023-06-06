@@ -4,7 +4,6 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Card from "react-bootstrap/Card";
 import { Outlet } from "react-router-dom";
-import { CategoryItem } from "../CardFactory";
 import Pagination from "react-bootstrap/Pagination";
 import {classicBooks} from "./bookList";
 import "../styles.css";
