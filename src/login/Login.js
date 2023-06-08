@@ -47,7 +47,7 @@ const Login = () => {
                         <Form.Label>Email address</Form.Label>
                         <Form.Control id="email" value={email} onChange={handleEmailChange} type="email" placeholder="Enter email" />
                         <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
+                            Nothing will be send anywhere. It's only for displaying purposes. 
                         </Form.Text>
                     </Form.Group>
 
