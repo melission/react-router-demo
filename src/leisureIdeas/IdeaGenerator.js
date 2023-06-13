@@ -9,7 +9,7 @@ const IdeaGenerator = () => {
   const pickRandomIdea = () => {
     const randomIndex = Math.floor(Math.random() * ideas.length);
     const selectedIdea = ideas[randomIndex].toString();
-    console.log(typeof selectedIdea)
+    // console.log(typeof selectedIdea)
     setRandomIdea(selectedIdea);
   };
 
