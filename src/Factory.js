@@ -5,7 +5,7 @@ import "./styles.css"
 import { CatalogList } from "./CardFactory";
 
 const Factory = () => {
-    const catalogList = ["products", "category"]
+    const catalogList = ["products", "category", "ideas"]
 
     return (
         <Container className="container-body">
