@@ -4,6 +4,7 @@ import { classicBooks } from "./bookList";
 import { useParams } from "react-router-dom";
 import authors from "./authorList";
 import "./books.css"
+import Row from "react-bootstrap/esm/Row";
 
 function getRandomRating(min, max) {
     min = Math.ceil(min);
@@ -25,14 +26,17 @@ const Book = () => {
 
     if (book) {
         bookInfo = (
-        <Container >
+        <Container className="book-block" >
 
-                <h1>{book.bookName}</h1>
-                <h3>{book.authorName}</h3>
-                <p>The book rating: {rating} based on {reviewNumber} reviews. </p>
+                <h1 className="book-block_title">{book.bookName}</h1>
+                <h3 className="book-block_author">{book.authorName}</h3>
+                <Row className="book-block_rating">
+                <div>The book rating: <strong>{rating}</strong>, based on <strong>{reviewNumber}</strong> reviews.</div>
                 <div>[all the numbers are generated randomly]</div>
-
-                <p>{author.description}</p>
+                </Row>
+                <Row>
+                <p className="book-block_about-author">{author.description}</p>
+                </Row>
 
 
         </Container>
