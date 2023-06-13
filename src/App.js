@@ -4,13 +4,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-);
-
 function App() {
   return (
     <div className="App">
@@ -36,9 +29,7 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-
       <Outlet />
-
       </div>
   );
 }
