@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import authors from "./authorList";
 import "./books.css"
 import Row from "react-bootstrap/esm/Row";
+import Button from "react-bootstrap/esm/Button"
 
 function getRandomRating(min, max) {
     min = Math.ceil(min);
@@ -49,7 +50,9 @@ const Book = () => {
     return(
         <div>
             {bookInfo}
+            <Button href="/category/books/">Back to catalogue</Button>
         </div>
+        
     )
 }
 
