@@ -1,0 +1,22 @@
+.idea-block {
+    height: 80vh;
+    /* border: 1px solid black; */
+}
+
+.idea-block_title {
+    width: 60%;
+    height: 8rem;
+    margin: 15px auto;
+    /* border: 1px solid green; */
+    padding-top: 30px;
+
+}
+
+.idea-block_content {
+    margin: 0 auto 30px;
+    width: 70%;
+    height: 300px;
+    border-width: 3px;
+    border-style: outset;
+    border-color: burlywood;
+}
