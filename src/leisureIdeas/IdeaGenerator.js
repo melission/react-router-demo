@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
+import Button from 'react-bootstrap/esm/Button';
 import ideas from "./ideas";
+import "./ideas.css"
 
 const IdeaGenerator = () => {
   const [randomIdea, setRandomIdea] = useState('');
 
   const pickRandomIdea = () => {
     const randomIndex = Math.floor(Math.random() * ideas.length);
-    const selectedIdea = ideas[randomIndex];
+    const selectedIdea = ideas[randomIndex].toString();
+    console.log(typeof selectedIdea)
     setRandomIdea(selectedIdea);
   };
 
   return (
-    <div>
-      <h2>Random Idea Generator</h2>
-      <button onClick={pickRandomIdea}>Generate Idea</button>
-      {randomIdea && <p>{randomIdea}</p>}
+    <div className='idea-block'>
+      <h2 className='idea-block_title'>Random Idea Generator</h2>
+      <p className='idea-block_content'>{randomIdea && {randomIdea}}</p>
+      <Button variant="outline-dark" onClick={pickRandomIdea}>Generate Idea</Button>
     </div>
   );
 };
