@@ -12,6 +12,7 @@ import Books from './category/Books';
 import Book from "./category/Book";
 import Factory from './Factory';
 import Login from './login/Login';
+import IdeaGenerator from './leisureIdeas/IdeaGenerator';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path: "login/",
         element: <Login />
       },
+      {
+        path: "ideas/",
+        element: <IdeaGenerator />
+      }
 
     ]
   }
