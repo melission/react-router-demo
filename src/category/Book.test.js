@@ -29,6 +29,12 @@ describe("testing classicBook list", () => {
             
         }
     })
+    test("an author exists in uniqueAuthors", () => {
+        for(const dict of classicBooks) {
+            expect(authors().toContain(dict.authorName))
+        }
+
+    })
 })
 
 
