@@ -16,7 +16,7 @@ const IdeaGenerator = () => {
   return (
     <div className='idea-block'>
       <h2 className='idea-block_title'>Random Idea Generator</h2>
-      <p className='idea-block_content'>{randomIdea && {randomIdea}}</p>
+      <p className='idea-block_content'>{randomIdea}</p>
       <Button variant="outline-dark" onClick={pickRandomIdea}>Generate Idea</Button>
     </div>
   );
