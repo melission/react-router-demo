@@ -12,11 +12,18 @@
 
 }
 
-.idea-block_content {
+.idea-block_box {
+    display: flex;
     margin: 0 auto 30px;
     width: 70%;
     height: 300px;
     border-width: 3px;
     border-style: outset;
     border-color: burlywood;
+    align-items: center;
+    justify-content: center;
+}
+
+.idea-box_text {
+    font-size: 1.2rem;
 }
