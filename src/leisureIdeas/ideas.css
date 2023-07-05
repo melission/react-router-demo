@@ -27,3 +27,17 @@
 .idea-box_text {
     font-size: 1.2rem;
 }
+
+@media (orientation: portrait) {
+    /* .idea-block {background-color: green;} */
+    .idea-block_title {
+        margin: 10% auto;
+    }
+    .idea-button{
+        position: absolute;
+        width: 30%;
+        height: 3.5rem;
+        bottom: 13%;
+        left: 35%;
+    }
+}
