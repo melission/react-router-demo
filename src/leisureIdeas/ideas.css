@@ -33,6 +33,9 @@
     .idea-block_title {
         margin: 10% auto;
     }
+    .idea-block_box {
+        height: 40%;
+    }
     .idea-button{
         position: absolute;
         width: 30%;
