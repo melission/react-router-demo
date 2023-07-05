@@ -19,7 +19,7 @@ const IdeaGenerator = () => {
       <section className='idea-block_box'>
         <div className='idea-box_text'>{randomIdea}</div>
       </section>
-      <Button variant="outline-dark" onClick={pickRandomIdea}>Generate Idea</Button>
+      <Button className='idea-button' variant="outline-dark" onClick={pickRandomIdea}>Generate Idea</Button>
     </div>
   );
 };
