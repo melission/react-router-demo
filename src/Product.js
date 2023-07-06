@@ -9,6 +9,7 @@ import Alert from 'react-bootstrap/Alert';
 import Button from "react-bootstrap/Button";
 import "./Product.css"
 import {BreadcrumbProduct} from "./breadcrumbs";
+import "./styles.css";
 
 const Status = ({product}) => {
     if (product.status === "Available") {
