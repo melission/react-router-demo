@@ -6,6 +6,7 @@ import authors from "./authorList";
 import "./books.css"
 import Row from "react-bootstrap/esm/Row";
 import Button from "react-bootstrap/esm/Button"
+import error404 from "../error-404.png"
 
 function getRandomRating(min, max) {
     min = Math.ceil(min);
@@ -18,14 +19,14 @@ const Book = () => {
     //useParams fetches the route and returns an ID
     const {bookID} = useParams();
     const book = classicBooks.find(b => b.id === Number(bookID))
-    const author = authors.find(author => author.name === String(book.authorName))
+    const author = authors.find(author => author.name === String(book?.authorName))
     const rating = getRandomRating(1, 5);
     const reviewNumber = Math.floor(Math.random() * 100);
 
 
     let bookInfo;
 
-    if (book) {
+    if (author) {
         bookInfo = (
         <Container className="book-block" >
 
@@ -42,15 +43,16 @@ const Book = () => {
 
         </Container>
     )} else {
-        <Container>
-                bookInfo = <div>Sorry, there seems to be a mistake in fetching a book. Try again, please</div>
-        </Container>
+                bookInfo = <Container>
+                                <div>Sorry, there seems to be a mistake in fetching a book. Try again, please</div>
+                                {error404}
+                            </Container>
 
     }
     return(
         <div>
             {bookInfo}
-            <p className="book-block_return-button" ><Button className="mx-auto" href="/category/books/">Back to catalogue</Button></p>
+            <p className="book-block_return-button"><Button className="mx-auto" href="/category/books/">Back to catalogue</Button></p>
         </div>
         
     )
