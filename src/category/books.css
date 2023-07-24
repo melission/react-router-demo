@@ -6,6 +6,7 @@
 
 .book-block_title {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .book-block_author {
@@ -20,12 +21,21 @@
 
 .book-block_about-author {
     /* margin: 15px auto; */
-    margin-top: 20rem;
+    margin: 20rem auto 0;
     padding: 15px;
-    /* width: 70%; */
+    max-width: 600px;
+    justify-content: center;
+    border: 1px solid blue;
     overflow: hidden;
     box-sizing: border-box;
     text-align: start;
+    
+}
 
-
+.book-block_return-button {
+    display: flex;
+    width: 80%;
+    /* border: 1px solid green; */
+    margin: auto;
+    
 }
