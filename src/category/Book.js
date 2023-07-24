@@ -3,7 +3,7 @@ import Container from "react-bootstrap/esm/Container";
 import { classicBooks } from "./bookList";
 import { useParams } from "react-router-dom";
 import authors from "./authorList";
-import "./books.css"
+import "./book.css"
 import Row from "react-bootstrap/esm/Row";
 import Button from "react-bootstrap/esm/Button"
 import error404 from "../error-404.png"
