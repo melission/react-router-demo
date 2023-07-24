@@ -50,7 +50,7 @@ const Book = () => {
     return(
         <div>
             {bookInfo}
-            <Button href="/category/books/">Back to catalogue</Button>
+            <p className="book-block_return-button" ><Button className="mx-auto" href="/category/books/">Back to catalogue</Button></p>
         </div>
         
     )
