@@ -55,8 +55,8 @@ const Books = () => {
 
             <Row className="card-block">
                 {paginatedList.map((book, index) => (
-                <Card key={index} className="card-body" border="light">
-                    <Card.Body>
+                <Card key={index} className="card-body p-0" border="light">
+                    <Card.Body className="p-0">
                     <Card.Title className="text-center">{book.bookName}</Card.Title>
                     <Card.Text className="card-text">by {book.authorName}</Card.Text>
                     </Card.Body>
