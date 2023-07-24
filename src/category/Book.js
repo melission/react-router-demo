@@ -43,9 +43,13 @@ const Book = () => {
 
         </Container>
     )} else {
-                bookInfo = <Container>
-                                <div>Sorry, there seems to be a mistake in fetching a book. Try again, please</div>
-                                {error404}
+                bookInfo = <Container className="error-block">
+                                <Row>
+                                    <div className="error-text">Sorry, there seems to be a mistake in fetching a book. Try again, please</div>
+                                </Row>
+                                <Row>
+                                    <img className="error-image" src={error404}></img>
+                                </Row>
                             </Container>
 
     }
