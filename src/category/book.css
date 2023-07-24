@@ -22,12 +22,13 @@
 
 .book-block_about-author {
     /* margin: 15px auto; */
-    margin: 20rem auto 0;
+    margin: 15rem auto 0;
     padding: 15px;
     height: 25%;
     max-width: 600px;
     justify-content: center;
-    border: 1px solid blue;
+    border-left: 4px solid blue;
+    border-right: 4px solid blue;
     overflow: hidden;
     box-sizing: border-box;
     text-align: start;
