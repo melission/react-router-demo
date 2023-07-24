@@ -22,7 +22,7 @@ const ShortDescription = ({ product }) => {
 const Products = ({ match }) => {
     const linkList = productData.map((product) => {
         return (
-                <Card className="card-body" border="light" style={{ height: "400px" }}>
+                <Card className="card-body p-0" border="light" style={{ height: "400px" }}>
                     <Card.Body>
                         <Card.Title className="card-title" style={{height: "100px"}}>{product.name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
@@ -54,4 +54,4 @@ const Products = ({ match }) => {
     )
 }
 
-export default Products;
+export default Products; 
