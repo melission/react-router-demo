@@ -1,21 +1,22 @@
 .book-block {
     height: 70vh;
-    margin: 30px auto;;
+    margin: 30px auto;
     /* border: 1px solid red; */
 }
 
 .book-block_title {
-    margin-bottom: 30px;
+    margin: 2rem 0;
     text-align: center;
 }
 
 .book-block_author {
-    margin-bottom: 15px;
+    margin: 25px 0;
 }
 
 .book-block_rating {
     margin: auto;
     justify-content: space-evenly;
+    font-size: 1.2rem;
     /* border: 1px solid blue; */
 }
 
@@ -23,12 +24,14 @@
     /* margin: 15px auto; */
     margin: 20rem auto 0;
     padding: 15px;
+    height: 25%;
     max-width: 600px;
     justify-content: center;
     border: 1px solid blue;
     overflow: hidden;
     box-sizing: border-box;
     text-align: start;
+    font-size: 1.2rem;
     
 }
 
