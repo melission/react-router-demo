@@ -42,7 +42,7 @@ const Products = ({ match }) => {
             <div>
                 <h3>Products</h3>
                 <Container>
-                    <Row>
+                    <Row className="justify-content-center">
                         {linkList}
                     </Row>
                 </Container>
