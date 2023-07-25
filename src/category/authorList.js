@@ -434,6 +434,17 @@ const authors = [
         "name": "Joseph Conrad",
         "description": "Joseph Conrad was a Polish-British writer known for his novels, including 'Heart of Darkness' and 'Lord Jim.' His works often explore themes of imperialism, morality, and the psychological complexities of human nature."
       },
+      {
+        "id": 88,
+        "name": "William Golding",
+        "description": "William Golding was an English novelist and playwright, best known for his novel 'Lord of the Flies.' His works often explore the darker aspects of human nature and the inherent struggle between civilization and savagery."
+      },
+      {
+        "id": 89,
+        "name": "Antoine de Saint-Exupéry",
+        "description": "Antoine de Saint-Exupéry was a French writer and aviator, known for his novella 'The Little Prince.' His works often touch on themes of innocence, love, friendship, and the complexities of adult life."
+      }
+      
 
 
   ]
