@@ -34,13 +34,20 @@ describe("testing classicBook list", () => {
             
         }
     })
-    test("an author exists in uniqueAuthors", () => {
-        for(const dict of classicBooks) {
-            let name = dict.authorName
-            expect(authors).toContain(name);
-        }
-
-    })
+    // test("an author exists in uniqueAuthors", () => {
+    //     for(const book of classicBooks) {
+    //         const name = book.authorName
+    //         console.log(authors.some(author => author.name === name))
+    //         expect(authors.some(author => author.name === name)).toBe(true)
+    //     }
+    // })
+    test("All authors should be present in the authors list", () => {
+        const missingAuthors = classicBooks
+          .map(book => book.authorName)
+          .filter(authorName => !authors.some(author => author.name === authorName));
+      
+        expect(missingAuthors).toEqual([]);
+      });
 })
 
 
