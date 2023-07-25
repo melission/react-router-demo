@@ -19,19 +19,25 @@ describe("testing classicBook list", () => {
         for(const dict of classicBooks) {
             //id check below
             expect(typeof dict[Object.keys(dict)[0]]).toBe("number");
+            
             //the initial id is 1
-            expect(typeof dict[Object.keys(dict)[0]]).toBeGreaterThan(0);
+            // expect(Object.keys(dict)[Object.keys(dict)[0]]).toBeGreaterThan(0);
+            expect(dict[Object.keys(dict)[0]]).toBeGreaterThan(0);
+
             //strings check below
             expect(typeof dict[Object.keys(dict)[1]]).toBe("string");
             expect(typeof dict[Object.keys(dict)[2]]).toBe("string");
-            expect(Object.keys(dict)[Object.keys(dict)[1]].length).toBeGreaterThan(0);
-            expect(Object.keys(dict)[Object.keys(dict)[2]].length).toBeGreaterThan(0);
+            expect(dict[Object.keys(dict)[1]].length).toBeGreaterThan(0);
+            expect(dict[Object.keys(dict)[2]].length).toBeGreaterThan(0);
+            // expect(Object.keys(dict)[Object.keys(dict)[1]].length).toBeGreaterThan(0);
+            // expect(Object.keys(dict)[Object.keys(dict)[2]].length).toBeGreaterThan(0);
             
         }
     })
     test("an author exists in uniqueAuthors", () => {
         for(const dict of classicBooks) {
-            expect(authors().toContain(dict.authorName))
+            let name = dict.authorName
+            expect(authors).toContain(name);
         }
 
     })
