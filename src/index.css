@@ -6,9 +6,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+.dark-theme {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
 }
