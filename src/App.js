@@ -6,6 +6,7 @@ import "./index.css";
 import * as React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
+import { CssBaseline } from '@mui/material';
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
@@ -16,13 +17,16 @@ function App() {
 
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
-  // console.log(colorMode)
+
+  const navbarBG = theme.palette.mode === 'dark' ? "dark" : "light";
+  const navbarText = '';
 
   return (
     <Box className="App"
     sx={{
       // display: 'flex',
-      // width: '100%',
+      height: '100%',
+      width: '100%',
       // alignItems: 'center',
       // justifyContent: 'center',
       bgcolor: 'background.default',
@@ -41,7 +45,7 @@ function App() {
         crossorigin="anonymous"></link>
       </head>
 
-      <Navbar bg="light"  variant="light">
+      <Navbar bg={navbarBG}  variant={navbarBG}>
         <Container>
           <Navbar.Brand href={`/`}>Basic Page</Navbar.Brand>
           <Nav className="me-auto">
@@ -50,10 +54,12 @@ function App() {
             <Nav.Link href={`/factory/`}>Factory</Nav.Link>
             <Nav.Link href={`/login/`} >Log in</Nav.Link>
           </Nav>
+          <Box>
           {theme.palette.mode} mode
-        <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-          {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-        </IconButton>
+            <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+              {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
+          </Box>
         </Container>
       </Navbar>
       {/* <ToggleColorMode /> */}
@@ -74,7 +80,15 @@ export default function ToggleColorMode() {
   }, [mode]);
 
   const toggleColorMode = () => {
-    setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+    const newMode = mode === "light" ? "dark" : "light";
+    setMode(newMode)
+
+    // const rootElement = document.documentElement;
+    // rootElement.classList.remove(mode === "light" ? "dark": "light")
+    // rootElement.classList.add(newMode)
+
+    // rootElement.classList.toggle(mode === 'light' ? 'dark' : 'light')
+    // setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
   };
 
   const colorMode = {
@@ -90,6 +104,7 @@ export default function ToggleColorMode() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
+      <CssBaseline />
         <App />
       </ThemeProvider>
     </ColorModeContext.Provider>
