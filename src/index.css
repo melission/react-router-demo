@@ -15,12 +15,16 @@ code {
     monospace;
 }
 
-:root {
+.light {
   --background-color: #ffffff;
   --text-color: #000000;
 }
 
-.dark-theme {
+.dark {
   --background-color: #1a1a1a;
   --text-color: #ffffff;
+}
+
+.App {
+  min-height: 100vh;
 }
