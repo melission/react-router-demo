@@ -6,6 +6,8 @@ import "./styles.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
+const storedMode = localStorage.getItem('colorMode')
+
 const ShortDescription = ({ product }) => {
     let text = product.description
     console.log(typeof text.length)
@@ -22,7 +24,7 @@ const ShortDescription = ({ product }) => {
 const Products = ({ match }) => {
     const linkList = productData.map((product) => {
         return (
-                <Card className="card-body p-0" border="light" style={{ height: "400px" }}>
+                <Card className="card-body p-0" bg={storedMode} variant={storedMode} border="light" style={{ height: "400px" }}>
                     <Card.Body>
                         <Card.Title className="card-title" style={{height: "100px"}}>{product.name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
