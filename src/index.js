@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import ToggleColorMode from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './error-page';
@@ -14,10 +14,11 @@ import Factory from './Factory';
 import Login from './login/Login';
 import IdeaGenerator from './leisureIdeas/IdeaGenerator';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <ToggleColorMode />,
     errorElement: <ErrorPage />,
     children: [
       {
