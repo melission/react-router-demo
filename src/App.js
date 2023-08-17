@@ -10,6 +10,7 @@ import { CssBaseline } from '@mui/material';
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+import HomeIcon from '@mui/icons-material/Home';
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -47,7 +48,7 @@ function App() {
 
       <Navbar bg={navbarBG}  variant={navbarBG}>
         <Container>
-          <Navbar.Brand href={`/`}>Basic Page</Navbar.Brand>
+          <Navbar.Brand href={`/`}><HomeIcon /></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href={`/category/`}>Category</Nav.Link>
             <Nav.Link href={`/products/`}>Products</Nav.Link>
@@ -55,7 +56,7 @@ function App() {
             <Nav.Link href={`/login/`} >Log in</Nav.Link>
           </Nav>
           <Box>
-          <div className='themeName'>{theme.palette.mode} mode</div>
+          {/* <div className='themeName'>{theme.palette.mode} mode</div> */}
             <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
               {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
