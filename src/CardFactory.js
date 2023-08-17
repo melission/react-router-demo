@@ -2,6 +2,8 @@ import React from "react";
 import Card from 'react-bootstrap/Card';
 import "./styles.css"
 
+const storedMode = localStorage.getItem('colorMode')
+
 const ShortDescription = ({ product }) => {
     let text = product.description
     console.log(typeof text.length)
@@ -20,7 +22,7 @@ const CatalogList = ({catalogList}) => {
     
     const linkCatalog = catalogList.map((catalogEntry) => {
         return (
-            <Card className="card-body" border="light">
+            <Card className="card-body" bg='transparent' border={storedMode}>
                 <Card.Body>
                     <Card.Title>{catalogEntry}</Card.Title>
                 </Card.Body>
@@ -34,10 +36,10 @@ const CatalogList = ({catalogList}) => {
 }
 
 const CategoryList = ({categoryList, category}) => {
-    console.log(categoryList)
+    // console.log(categoryList)
     const linkList = categoryList.map((product) => {
         return (
-                <Card className="card-body" border="light" style={{ height: "400px" }}>
+                <Card className="card-body" bg="transparent" border={storedMode} style={{ height: "400px" }}>
                     <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
@@ -55,9 +57,9 @@ const CategoryList = ({categoryList, category}) => {
 };
 
 const CategoryItem = (categoryItem) => {
-    console.log(categoryItem)
+    // console.log(categoryItem)
     return(
-        <Card className="card-body" border="light" style={{ height: "400px" }}>
+        <Card className="card-body" bg='transparent' border={storedMode} style={{ height: "400px" }}>
             <Card.Body>
                 <Card.Title>{categoryItem}</Card.Title>
             </Card.Body>

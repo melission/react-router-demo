@@ -11,6 +11,8 @@ import "./Product.css"
 import {BreadcrumbProduct} from "./breadcrumbs";
 import "./styles.css";
 
+const storedMode = localStorage.getItem('colorMode')
+
 const Status = ({product}) => {
     if (product.status === "Available") {
         return (
@@ -95,7 +97,7 @@ const Product = ( ) => {
     return (
         <div>
             <div class="product-breadcrumbs">
-                <BreadcrumbProduct current={productID}></BreadcrumbProduct>
+                <BreadcrumbProduct variant={storedMode} current={productID}></BreadcrumbProduct>
             </div>
             <div>{productInfo}</div>
         </div>

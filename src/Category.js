@@ -6,13 +6,14 @@ import Card from "react-bootstrap/Card";
 import bookImage from "./images/books/reading-book.png";
 // import { CategoryList } from "./CardFactory";
 
+const storedMode = localStorage.getItem('colorMode')
 
 const categoryList = ["books"]
 
 const CardFactory = (categoryItem) => {
     // console.log(categoryItem)
     return(
-        <Card className="card-body" border="light" style={{ height: "400px" }}>
+        <Card className="card-body" variant={storedMode} border={storedMode} bg='transparent' style={{ height: "400px" }}>
             <Card.Img variant="top" src={bookImage} />
             <Card.Body>
                 <Card.Title>{categoryItem}</Card.Title>
