@@ -55,7 +55,7 @@ function App() {
             <Nav.Link href={`/login/`} >Log in</Nav.Link>
           </Nav>
           <Box>
-          {theme.palette.mode} mode
+          <div className='themeName'>{theme.palette.mode} mode</div>
             <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
               {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
@@ -105,7 +105,9 @@ export default function ToggleColorMode() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
       <CssBaseline />
-        <App />
+        <App>
+          <Outlet />
+        </App>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
