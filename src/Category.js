@@ -1,5 +1,5 @@
 import React from "react";
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Card from "react-bootstrap/Card";
@@ -12,7 +12,7 @@ const categoryList = ["books"]
 
 const CardFactory = (categoryItem) => {
     // console.log(categoryItem)
-    return(
+    return (
         <Card className="card-body" variant={storedMode} border={storedMode} bg='transparent' style={{ height: "400px" }}>
             <Card.Img variant="top" src={bookImage} />
             <Card.Body>
@@ -41,6 +41,6 @@ const Category = () => {
             </div>
         </div>
     )
-    }
+}
 
 export default Category;
