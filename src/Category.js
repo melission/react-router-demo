@@ -4,6 +4,7 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Card from "react-bootstrap/Card";
 import bookImage from "./images/books/reading-book.png";
+import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 // import { CategoryList } from "./CardFactory";
 
 const storedMode = localStorage.getItem('colorMode')
@@ -12,14 +13,17 @@ const categoryList = ["books"]
 
 const CardFactory = (categoryItem) => {
     // console.log(categoryItem)
+    let cardBG = storedMode === 'dark' ? "secondary" : "transparent"
+    let cardText = storedMode === "dark" ? "text-light" : "text-secondary"
+
     return (
-        <Card className="card-body" variant={storedMode} border={storedMode} bg='transparent' style={{ height: "400px" }}>
+        <Card className="card-body" variant={storedMode} border={storedMode} bg={cardBG} style={{ height: "400px" }}>
             <Card.Img variant="top" src={bookImage} />
             <Card.Body>
                 <Card.Title>{categoryItem}</Card.Title>
             </Card.Body>
             <Card.Footer>
-                <Card.Link href={`/category/${categoryItem}/`}>See detailes</Card.Link>
+                <Card.Link className={cardText} href={`/category/${categoryItem}/`}>See detailes</Card.Link>
             </Card.Footer>
         </Card>
     )
