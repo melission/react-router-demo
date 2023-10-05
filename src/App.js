@@ -66,9 +66,9 @@ function App() {
 
 export default function ToggleColorMode() {
   const storedMode = localStorage.getItem('colorMode')
-
+  const prefferedMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'
   //changes each time when icon button is clicked
-  const [mode, setMode] = React.useState(storedMode || 'light');
+  const [mode, setMode] = React.useState(storedMode || prefferedMode);
 
   // Save the color mode to local storage whenever it changes
   React.useEffect(() => {
