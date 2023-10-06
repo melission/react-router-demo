@@ -1,5 +1,6 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 import "./styles.css"
 
 const storedMode = localStorage.getItem('colorMode')
@@ -7,7 +8,7 @@ const storedMode = localStorage.getItem('colorMode')
 const ShortDescription = ({ product }) => {
     let text = product.description
     console.log(typeof text.length)
-    if (text.length > 100) {        
+    if (text.length > 100) {
         console.log("yes")
         return text.slice(0, 100)
 
@@ -18,8 +19,8 @@ const ShortDescription = ({ product }) => {
 }
 
 //
-const CatalogList = ({catalogList}) => {
-    
+const CatalogList = ({ catalogList }) => {
+
     const linkCatalog = catalogList.map((catalogEntry) => {
         return (
             <Card className="card-body" bg='transparent' border={storedMode}>
@@ -27,7 +28,7 @@ const CatalogList = ({catalogList}) => {
                     <Card.Title>{catalogEntry}</Card.Title>
                 </Card.Body>
                 <Card.Footer>
-                    <Card.Link href={`/${catalogEntry}`}>See more</Card.Link>                    
+                    <Card.Link><Link to={`/${catalogEntry}`}>See more</Link></Card.Link>
                 </Card.Footer>
             </Card>
         )
@@ -35,22 +36,22 @@ const CatalogList = ({catalogList}) => {
     return linkCatalog
 }
 
-const CategoryList = ({categoryList, category}) => {
+const CategoryList = ({ categoryList, category }) => {
     // console.log(categoryList)
     const linkList = categoryList.map((product) => {
         return (
-                <Card className="card-body" bg="transparent" border={storedMode} style={{ height: "400px" }}>
-                    <Card.Body>
-                        <Card.Title>{product.name}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
-                        <Card.Text className="card-desc">
-                            Here is a quick product description: <ShortDescription product={product} />
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <Card.Link href={`/${category}}/${product.id}`}>See detailes</Card.Link>
-                    </Card.Footer>
-              </Card>
+            <Card className="card-body" bg="transparent" border={storedMode} style={{ height: "400px" }}>
+                <Card.Body>
+                    <Card.Title>{product.name}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
+                    <Card.Text className="card-desc">
+                        Here is a quick product description: <ShortDescription product={product} />
+                    </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                    <Card.Link><Link to={`/${category}}/${product.id}`}>See detailes</Link></Card.Link>
+                </Card.Footer>
+            </Card>
         );
     });
     return linkList;
@@ -58,17 +59,17 @@ const CategoryList = ({categoryList, category}) => {
 
 const CategoryItem = (categoryItem) => {
     // console.log(categoryItem)
-    return(
+    return (
         <Card className="card-body" bg='transparent' border={storedMode} style={{ height: "400px" }}>
             <Card.Body>
                 <Card.Title>{categoryItem}</Card.Title>
             </Card.Body>
             <Card.Footer>
-                <Card.Link href={`/category/${categoryItem.id}/`}>See detailes</Card.Link>
+                <Card.Link><Link to={`/category/${categoryItem.id}/`}>See detailes</Link></Card.Link>
             </Card.Footer>
         </Card>
     )
 
 }
 
-export {CategoryList, CategoryItem, CatalogList};
+export { CategoryList, CategoryItem, CatalogList };
