@@ -26,15 +26,15 @@ const router = createBrowserRouter([
         element: <Category />,
       },
       {
-        path: "products/",
+        path: "products",
         element: <Products />,
       },
       {
-        path: "products/:productID/",
+        path: "products/:productID",
         element: <Product />,
       },
       {
-        path: "category/books/",
+        path: "category/books",
         element: <Books />
       },
       {
@@ -46,11 +46,11 @@ const router = createBrowserRouter([
         element: <Factory />
       },
       {
-        path: "login/",
+        path: "login",
         element: <Login />
       },
       {
-        path: "ideas/",
+        path: "ideas",
         element: <IdeaGenerator />
       }
 
@@ -61,11 +61,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
