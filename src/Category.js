@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Card from "react-bootstrap/Card";
@@ -23,7 +23,7 @@ const CardFactory = (categoryItem) => {
                 <Card.Title>{categoryItem}</Card.Title>
             </Card.Body>
             <Card.Footer>
-                <Card.Link className={cardText} href={`/category/${categoryItem}/`}>See detailes</Card.Link>
+                <Card.Link className={cardText}><Link to={`/category/${categoryItem}/`}>See detailes</Link></Card.Link>
             </Card.Footer>
         </Card>
     )

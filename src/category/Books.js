@@ -3,7 +3,7 @@ import { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Card from "react-bootstrap/Card";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Pagination from "react-bootstrap/Pagination";
 import { classicBooks } from "./bookList";
 import "../styles.css";
@@ -59,7 +59,7 @@ const Books = () => {
                                 <Card.Text className="card-text">by {book.authorName}</Card.Text>
                             </Card.Body>
                             <Card.Footer>
-                                <Card.Link href={`/category/books/${book.id}`}>See details</Card.Link>
+                                <Card.Link><Link to={`/category/books/${book.id}`}>See details</Link></Card.Link>
                             </Card.Footer>
                         </Card>
                     ))}
