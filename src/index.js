@@ -5,7 +5,7 @@ import ToggleColorMode from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './error-page';
-import Category from './Category';
+import Category from './category/Category';
 import Products from './Products';
 import Product from './Product';
 import Books from './books/Books';
