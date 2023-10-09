@@ -8,12 +8,12 @@ import Carousel from 'react-bootstrap/Carousel';
 import Alert from 'react-bootstrap/Alert';
 import Button from "react-bootstrap/Button";
 import "./Product.css"
-import {BreadcrumbProduct} from "./breadcrumbs";
+import { BreadcrumbProduct } from "./breadcrumbs";
 import "./styles.css";
 
 const storedMode = localStorage.getItem('colorMode')
 
-const Status = ({product}) => {
+const Status = ({ product }) => {
     if (product.status === "Available") {
         return (
             <Alert variant="success">
@@ -32,8 +32,8 @@ const Status = ({product}) => {
 
 
 
-const Product = ( ) => {
-    const {productID} = useParams();
+const Product = () => {
+    const { productID } = useParams();
     const product = productData.find(p => p.id === Number(productID));
     // console.log(product.id)
 
@@ -41,14 +41,6 @@ const Product = ( ) => {
 
     if (product) {
         productInfo = (
-            // <div>
-                
-            //     <h3> {product.name} </h3>
-            //     <p>{ product.description }</p>
-            //     <hr></hr>
-            //     <h4>{product.status}</h4>
-            // </div
-
             <div class="product-body">
                 <div className="product-main">
                     <h2>{product.name}</h2>
@@ -60,27 +52,23 @@ const Product = ( ) => {
                         <Carousel className="border" variant="dark">
                             <Carousel.Item>
                                 <img
-                                className="d-block w-90"
-                                src={image1}
-                                alt="First slide"
-                                />
-                                {/* <Carousel.Caption>
-                                <h3>{product.name} slide one</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption> */}
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                className="d-block w-90"
-                                src={image2}
-                                alt="Second slide"
+                                    className="d-block w-90"
+                                    src={image1}
+                                    alt="First slide"
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
-                                className="d-block w-90"
-                                src={image3}
-                                alt="Third slide"
+                                    className="d-block w-90"
+                                    src={image2}
+                                    alt="Second slide"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-90"
+                                    src={image3}
+                                    alt="Third slide"
                                 />
                             </Carousel.Item>
                         </Carousel>
