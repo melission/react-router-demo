@@ -20,17 +20,18 @@ function App() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
   const navbarBG = theme.palette.mode === 'dark' ? "dark" : "light";
+  const navbarTextColour = navbarBG === 'dark' ? "light" : "dark"
 
   return (
     <Box className="App" bgcolor={(storedMode || prefferedMode)}>
       <Navbar bg={navbarBG} variant={navbarBG}>
         <Container>
-          <Navbar.Brand><Link to={`/`}><HomeIcon /></Link></Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link><Link to={`/category/`}>Category</Link></Nav.Link>
-            <Nav.Link><Link to={`products`}>Products</Link></Nav.Link>
-            <Nav.Link><Link to={`factory`}>Factory</Link></Nav.Link>
-            <Nav.Link><Link to={`login`}>Log in</Link></Nav.Link>
+          <Navbar.Brand><Link style={{ color: 'inherit' }} to={`/`}><HomeIcon /></Link></Navbar.Brand>
+          <Nav className="me-auto ">
+            <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`/category/`}>Category</Link></Nav.Link>
+            <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`products`}>Products</Link></Nav.Link>
+            <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`factory`}>Factory</Link></Nav.Link>
+            <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`login`}>Log in</Link></Nav.Link>
           </Nav>
           <Box>
             {/* <div className='themeName'>{theme.palette.mode} mode</div> */}

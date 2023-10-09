@@ -24,7 +24,12 @@ const ShortDescription = ({ product }) => {
 const Products = ({ match }) => {
     const linkList = productData.map((product) => {
         return (
-            <Card className="card-body p-0" bg='transparent' variant={storedMode} border={storedMode} style={{ height: "400px" }}>
+            <Card
+                className="card-body p-0"
+                bg='transparent'
+                variant={storedMode}
+                border={storedMode}
+                style={{ height: "400px" }}>
                 <Card.Body>
                     <Card.Title className="card-title" style={{ height: "100px" }}>{product.name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
@@ -33,7 +38,13 @@ const Products = ({ match }) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <Card.Link ><Link to={`/products/${product.id}`}>See detailes</Link></Card.Link>
+                    <Card.Link>
+                        <Link
+                            className="text-decoration-none"
+                            style={{ color: "inherit" }}
+                            to={`/products/${product.id}`}>See detailes
+                        </Link>
+                    </Card.Link>
                 </Card.Footer>
             </Card>
         );

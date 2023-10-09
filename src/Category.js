@@ -23,7 +23,7 @@ const CardFactory = (categoryItem) => {
                 <Card.Title>{categoryItem}</Card.Title>
             </Card.Body>
             <Card.Footer>
-                <Card.Link className={cardText}><Link to={`/category/${categoryItem}/`}>See detailes</Link></Card.Link>
+                <Card.Link className={cardText}><Link className="text-decoration-none" style={{ color: "inherit" }} to={`/category/${categoryItem}/`}>See detailes</Link></Card.Link>
             </Card.Footer>
         </Card>
     )

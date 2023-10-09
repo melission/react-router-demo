@@ -23,12 +23,21 @@ const CatalogList = ({ catalogList }) => {
 
     const linkCatalog = catalogList.map((catalogEntry) => {
         return (
-            <Card className="card-body" bg='transparent' border={storedMode}>
+            <Card
+                className="card-body"
+                bg='transparent'
+                border={storedMode}>
                 <Card.Body>
                     <Card.Title>{catalogEntry}</Card.Title>
                 </Card.Body>
                 <Card.Footer>
-                    <Card.Link><Link to={`/${catalogEntry}`}>See more</Link></Card.Link>
+                    <Card.Link>
+                        <Link
+                            className="text-decoration-none"
+                            style={{ color: "inherit" }}
+                            to={`/${catalogEntry}`}>See more
+                        </Link>
+                    </Card.Link>
                 </Card.Footer>
             </Card>
         )
@@ -40,7 +49,11 @@ const CategoryList = ({ categoryList, category }) => {
     // console.log(categoryList)
     const linkList = categoryList.map((product) => {
         return (
-            <Card className="card-body" bg="transparent" border={storedMode} style={{ height: "400px" }}>
+            <Card
+                className="card-body"
+                bg="transparent"
+                border={storedMode}
+                style={{ height: "400px" }}>
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{product.status}</Card.Subtitle>
@@ -49,7 +62,13 @@ const CategoryList = ({ categoryList, category }) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <Card.Link><Link to={`/${category}}/${product.id}`}>See detailes</Link></Card.Link>
+                    <Card.Link>
+                        <Link
+                            className="text-decoration-none"
+                            style={{ color: "inherit" }}
+                            to={`/${category}}/${product.id}`}>See detailes
+                        </Link>
+                    </Card.Link>
                 </Card.Footer>
             </Card>
         );
@@ -65,7 +84,13 @@ const CategoryItem = (categoryItem) => {
                 <Card.Title>{categoryItem}</Card.Title>
             </Card.Body>
             <Card.Footer>
-                <Card.Link><Link to={`/category/${categoryItem.id}/`}>See detailes</Link></Card.Link>
+                <Card.Link>
+                    <Link
+                        className="text-decoration-none"
+                        style={{ color: "inherit" }}
+                        to={`/category/${categoryItem.id}/`}>See detailes
+                    </Link>
+                </Card.Link>
             </Card.Footer>
         </Card>
     )

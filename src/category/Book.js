@@ -59,7 +59,13 @@ const Book = () => {
         <div>
             {bookInfo}
             <p className="book-block_return-button mx-auto">
-                <Link to={"/category/books/"}><Button className="mx-auto">Back to catalogue</Button></Link></p>
+                <Link
+                    className="text-decoration-none"
+                    style={{ color: "inherit" }}
+                    to={"/category/books/"}>
+                    <Button className="mx-auto">Back to catalogue</Button>
+                </Link>
+            </p>
         </div>
 
     )

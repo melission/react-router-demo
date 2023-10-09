@@ -53,13 +53,22 @@ const Books = () => {
             <Container className="container-body">
                 <Row className="card-block">
                     {paginatedList.map((book, index) => (
-                        <Card key={index} className="card-body bg-transparent p-0" border="light">
+                        <Card
+                            key={index}
+                            className="card-body bg-transparent p-0"
+                            border="light">
                             <Card.Body className="p-0">
                                 <Card.Title className="text-center">{book.bookName}</Card.Title>
                                 <Card.Text className="card-text">by {book.authorName}</Card.Text>
                             </Card.Body>
                             <Card.Footer>
-                                <Card.Link><Link to={`/category/books/${book.id}`}>See details</Link></Card.Link>
+                                <Card.Link>
+                                    <Link
+                                        className="text-decoration-none"
+                                        style={{ color: "inherit" }}
+                                        to={`/category/books/${book.id}`}>See details
+                                    </Link>
+                                </Card.Link>
                             </Card.Footer>
                         </Card>
                     ))}
