@@ -1,15 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import productData from "./productData";
-import image1 from "./shoes.png";
-import image2 from "./sneakers.png";
-import image3 from "./football-boots.png";
+import image1 from "./images/shoes.png";
+import image2 from "./images/football-boots.png";
+import image3 from "./images/sneakers.png";
 import Carousel from 'react-bootstrap/Carousel';
 import Alert from 'react-bootstrap/Alert';
-import Button from "react-bootstrap/Button";
 import "./Product.css"
-import { BreadcrumbProduct } from "./breadcrumbs";
-import "./styles.css";
+import { BreadcrumbProduct } from "../breadcrumbs";
+import "../styles.css";
 
 const storedMode = localStorage.getItem('colorMode')
 

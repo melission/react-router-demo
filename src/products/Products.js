@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import productData from "./productData";
 import Card from 'react-bootstrap/Card';
-import "./styles.css"
+import "../styles.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
