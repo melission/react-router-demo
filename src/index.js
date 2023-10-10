@@ -15,11 +15,27 @@ import Login from './login/Login';
 import IdeaGenerator from './leisureIdeas/IdeaGenerator';
 
 
+const AppLayout = ({ children }) => (
+  <>
+    <ToggleColorMode />
+    {children}
+  </>
+)
+
+const MyApp = () => (
+  <>
+    <AppLayout />
+  </>
+)
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <ToggleColorMode />,
-    errorElement: <ErrorPage />,
+    element: <MyApp />,
+    errorElement:
+      <AppLayout>
+        <ErrorPage />
+      </AppLayout>,
     children: [
       {
         path: "category/",
