@@ -20,7 +20,6 @@ function App() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
   const navbarBG = theme.palette.mode === 'dark' ? "dark" : "light";
-  const navbarTextColour = navbarBG === 'dark' ? "light" : "dark"
 
   return (
     <Box className="App" bgcolor={(storedMode || prefferedMode)}>

@@ -5,25 +5,19 @@ import Row from "react-bootstrap/esm/Row";
 import Col from 'react-bootstrap/esm/Col'
 import Button from "react-bootstrap/esm/Button";
 import './styles.css'
-import 'react-bootstrap'; // Import Bootstrap CSS
-
 
 const storedMode = localStorage.getItem('colorMode')
 
 const ErrorPage = () => {
     const error = useRouteError();
-    console.log('error page', storedMode)
-    let textColour = storedMode === "dark" ? "text-light" : "text-secondary"
     let buttonTheme = storedMode === 'dark' ? 'outline-light' : "outline-dark"
-
-
     return (
-        <Container bg={storedMode} text={textColour}>
+        <Container style={{ backgroundColor: { storedMode } }}>
             <Row className="justify-content-center p-3">
                 <h1>{error.statusText || error.meggase}</h1>
             </Row>
             <Row>
-                <Col><img src={errorImage} alt="an error image"></img></Col>
+                <Col><img src={errorImage} alt="this is an error page"></img></Col>
                 <Col>
                     <h2>Woah!</h2>
                     <p>Something unexpected happened, that's why we can't find the page you're looking for.</p>

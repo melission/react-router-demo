@@ -16,21 +16,15 @@ function getRandomRating(min, max) {
 }
 
 const Book = () => {
-
-    //useParams fetches the route and returns an ID
     const { bookID } = useParams();
     const book = classicBooks.find(b => b.id === Number(bookID))
     const author = authors.find(author => author.name === String(book?.authorName))
     const rating = getRandomRating(1, 5);
     const reviewNumber = Math.floor(Math.random() * 100);
-
-
     let bookInfo;
-
     if (author) {
         bookInfo = (
             <Container className="book-block" >
-
                 <h1 className="book-block_title">{book.bookName}</h1>
                 <h3 className="book-block_author">{book.authorName}</h3>
                 <Row className="book-block_rating">
@@ -40,8 +34,6 @@ const Book = () => {
                 <Row>
                     <p className="book-block_about-author">{author.description}</p>
                 </Row>
-
-
             </Container>
         )
     } else {

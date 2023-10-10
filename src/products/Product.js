@@ -34,7 +34,7 @@ const Product = () => {
     const { productID } = useParams();
     const product = productData.find(p => p.id === Number(productID));
     const { images } = productImage.find(p => p.id === Number(productID))
-    console.log('image', images)
+    // console.log('image', images)
 
     let productInfo;
 
