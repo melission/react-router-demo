@@ -1,14 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import productData from "./productData";
-import image1 from "./images/shoes.png";
-import image2 from "./images/football-boots.png";
-import image3 from "./images/sneakers.png";
+import productImage from "./productImageLink";
 import Carousel from 'react-bootstrap/Carousel';
 import Alert from 'react-bootstrap/Alert';
 import "./Product.css"
 import { BreadcrumbProduct } from "../breadcrumbs";
 import "../styles.css";
+import Row from "react-bootstrap/esm/Row";
+import Col from 'react-bootstrap/Col';
+import Container from "react-bootstrap/esm/Container";
 
 const storedMode = localStorage.getItem('colorMode')
 
@@ -29,61 +30,54 @@ const Status = ({ product }) => {
 }
 
 
-
-
 const Product = () => {
     const { productID } = useParams();
     const product = productData.find(p => p.id === Number(productID));
-    // console.log(product.id)
+    const { images } = productImage.find(p => p.id === Number(productID))
+    console.log('image', images)
 
     let productInfo;
 
     if (product) {
         productInfo = (
-            <div class="product-body">
-                <div className="product-main">
-                    <h2>{product.name}</h2>
-                    <Status product={product} />
-                    <p class="product-desc">
-                        {product.description}
-                    </p>
-                    <div className="carusel-wrapper">
-                        <Carousel className="border" variant="dark">
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-90"
-                                    src={image1}
-                                    alt="First slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-90"
-                                    src={image2}
-                                    alt="Second slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-90"
-                                    src={image3}
-                                    alt="Third slide"
-                                />
-                            </Carousel.Item>
-                        </Carousel>
-                    </div>
-                </div>
+            <div className="product-body">
+                <Container className="product-main" fluid>
+                    <Row className="justify-content-md-center">
+                        <h2>{product.name}</h2>
+                        <Status product={product} />
+                    </Row>
+                    <Row>
+                        <Col>
+                            <div className="carusel-wrapper">
+                                <Carousel className="border" variant="dark">
+                                    {images.map((image) => {
+                                        return (
+                                            <Carousel.Item>
+                                                <img
+                                                    className="d-block w-90"
+                                                    src={image}
+                                                    alt="First slide"
+                                                />
+                                            </Carousel.Item>)
+                                    })}
+                                </Carousel>
+                            </div>
+                        </Col>
+                        <Col>
+                            <p className="product-desc">
+                                {product.description}
+                            </p>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         );
     } else {
         productInfo = <h2>Sorry. The product doesn't excist.</h2>
     }
-
-    // let currentID = product.id
-    // console.log("before return", currentID)
     return (
         <div>
-            <div class="product-breadcrumbs">
+            <div className="product-breadcrumbs">
                 <BreadcrumbProduct variant={storedMode} current={productID}></BreadcrumbProduct>
             </div>
             <div>{productInfo}</div>
