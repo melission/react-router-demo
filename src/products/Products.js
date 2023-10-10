@@ -12,11 +12,11 @@ const ShortDescription = ({ product }) => {
     let text = product.description
     // console.log(typeof text.length)
     if (text.length > 100) {
-        console.log("yes")
+        // console.log("yes")
         return text.slice(0, 100)
 
     } else {
-        console.log("no")
+        // console.log("no")
         return text
     }
 }
