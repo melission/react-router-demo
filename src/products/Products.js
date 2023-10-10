@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import productData from "./productData";
 import Card from 'react-bootstrap/Card';
@@ -10,7 +10,7 @@ const storedMode = localStorage.getItem('colorMode')
 
 const ShortDescription = ({ product }) => {
     let text = product.description
-    console.log(typeof text.length)
+    // console.log(typeof text.length)
     if (text.length > 100) {
         console.log("yes")
         return text.slice(0, 100)
