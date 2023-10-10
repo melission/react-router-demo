@@ -1,18 +1,44 @@
-import { useRouteError } from "react-router-dom";
-import errorImage from "./error-404.png"
+import { Link, useRouteError } from "react-router-dom";
+import errorImage from "./404.png"
+import Container from "react-bootstrap/esm/Container";
+import Row from "react-bootstrap/esm/Row";
+import Col from 'react-bootstrap/esm/Col'
+import Button from "react-bootstrap/esm/Button";
+import './styles.css'
+import 'react-bootstrap'; // Import Bootstrap CSS
+
+
+const storedMode = localStorage.getItem('colorMode')
 
 const ErrorPage = () => {
     const error = useRouteError();
-    console.error(error)
+    console.log('error page', storedMode)
+    let textColour = storedMode === "dark" ? "text-light" : "text-secondary"
+    let buttonTheme = storedMode === 'dark' ? 'outline-light' : "outline-dark"
 
-    return(
-        <div id="error-page">
-            <h1><i>{error.statusText || error.meggase}</i></h1>
-            <h2>Woah!</h2>
-            <p>Something unexpected happened, that's why we can't find the page you're looking for.</p>
-            <p>Sorry!</p>
-            <img src={errorImage} alt="an error image"></img>
-        </div>
+
+    return (
+        <Container bg={storedMode} text={textColour}>
+            <Row className="justify-content-center p-3">
+                <h1>{error.statusText || error.meggase}</h1>
+            </Row>
+            <Row>
+                <Col><img src={errorImage} alt="an error image"></img></Col>
+                <Col>
+                    <h2>Woah!</h2>
+                    <p>Something unexpected happened, that's why we can't find the page you're looking for.</p>
+                    <p>Sorry!</p>
+                    <Row className="justify-content-center p-3">
+                        <Button variant={buttonTheme}>
+                            <Link
+                                className="text-decoration-none"
+                                style={{ color: "inherit" }}
+                                to={`/`}>Main page</Link>
+                        </Button>
+                    </Row>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
