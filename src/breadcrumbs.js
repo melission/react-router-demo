@@ -1,27 +1,22 @@
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { Link } from 'react-router-dom';
 
-const BreadcrumbProduct = ({ product }) => {
-
-    // let currentId = product.id
-
-    // console.log(product)
-
+const BreadcrumbProduct = (product) => {
     return (
         <Breadcrumb>
-            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+            <Breadcrumb.Item><Link to={`/`}>Home</Link></Breadcrumb.Item>
             <Breadcrumb.Item >
                 <Link to={`/products`}>Products</Link>
             </Breadcrumb.Item>
-            <Breadcrumb.Item active>{product}</Breadcrumb.Item>
+            <Breadcrumb.Item active>{product.current}</Breadcrumb.Item>
         </Breadcrumb>
     );
 }
 
-const BreadcrumbCategory = ({ book }) => {
+const BreadcrumbCategory = (book) => {
     return (
         <Breadcrumb>
-            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+            <Breadcrumb.Item><Link to={`/`}>Home</Link></Breadcrumb.Item>
             <Breadcrumb.Item >
                 <Link to={`/category`}>Category</Link>
             </Breadcrumb.Item>
