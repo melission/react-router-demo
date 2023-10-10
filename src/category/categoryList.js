@@ -3,6 +3,10 @@ const categoryImage = [
     {
         name: 'books',
         image: books
+    },
+    {
+        name: 'magazines',
+        image: books
     }
 ]
 
