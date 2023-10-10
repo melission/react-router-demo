@@ -33,7 +33,7 @@
     box-sizing: border-box;
     text-align: start;
     font-size: 1.2rem;
-    
+
 }
 
 .book-block_return-button {
@@ -41,7 +41,8 @@
     width: 80%;
     /* border: 1px solid green; */
     margin: auto;
-    
+    justify-content: center;
+
 }
 
 .error-block {
