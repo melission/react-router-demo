@@ -6,7 +6,7 @@ import authors from "./authorList";
 import "./book.css"
 import Row from "react-bootstrap/esm/Row";
 import Button from "react-bootstrap/esm/Button"
-import error404 from "../404.png"
+import error404 from "../images/404.png"
 import { Link } from "react-router-dom";
 
 function getRandomRating(min, max) {
