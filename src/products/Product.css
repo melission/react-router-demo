@@ -2,13 +2,12 @@ img {
     margin: auto;
 }
 
-.product-desc {
+/* .product-desc {
     height: 150px;
     display: block;
     width: 80%;
-    /* border: 1px solid blue; */
     box-sizing: border-box;
     margin: auto;
     overflow: scroll;
     text-align: left;
-}
+} */
