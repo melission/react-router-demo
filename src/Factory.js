@@ -8,9 +8,9 @@ const Factory = () => {
     const catalogList = ["products", "category", "ideas"]
 
     return (
-        <Container className="container-body">
-            <Row className="card-block">
-                <CatalogList catalogList={catalogList} />            
+        <Container>
+            <Row>
+                <CatalogList catalogList={catalogList} />
             </Row>
         </Container>
     )

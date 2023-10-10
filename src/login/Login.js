@@ -11,7 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -40,43 +40,45 @@ const Login = () => {
   };
 
   return (
-        <Container className='login-container'>
-            <Row>
-                <Form className='login-form' onSubmit={handleLogin}>
-                    <Form.Group className="mb-2" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control id="email" value={email} onChange={handleEmailChange} type="email" placeholder="Enter email" />
-                        <Form.Text className="text-muted">
-                            Nothing will be send anywhere. It's only for displaying purposes. 
-                        </Form.Text>
-                    </Form.Group>
+    <Container className='login-container'>
+      <Row>
+        <Form className='login-form' onSubmit={handleLogin}>
+          <Form.Group className="mb-2" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control id="email" value={email} onChange={handleEmailChange} type="email" placeholder="Enter email" />
+            <Form.Text className="text-muted">
+              Nothing will be send anywhere. It's only for displaying purposes.
+            </Form.Text>
+          </Form.Group>
 
-                    <Form.Group className="mb-2" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control id="password" value={password} onChange={handlePasswordChange} type="password" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Keep me logged in" />
-                    </Form.Group>
-                    <Button className='login-button' variant="outline-primary" type="submit" disabled={isLoading}>
-                    {isLoading ? (
-                      <>
-                        <Spinner
-                          as="span"
-                          animation="grow"
-                          size="sm"
-                          role="status"
-                          aria-hidden="true"
-                        />
-                        Loading...
-                      </>
-                    ) : (
-                      'Login'
-                    )}
-                    </Button>
-                </Form>
-            </Row>
-        </Container>
+          <Form.Group className="mb-2" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control id="password" value={password} onChange={handlePasswordChange} type="password" placeholder="Password" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Keep me logged in" />
+          </Form.Group>
+          <Row>
+            <Button className='login-button mx-auto' variant="outline-primary" type="submit" disabled={isLoading}>
+              {isLoading ? (
+                <>
+                  <Spinner
+                    as="span"
+                    animation="grow"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />
+                  Loading...
+                </>
+              ) : (
+                'Login'
+              )}
+            </Button>
+          </Row>
+        </Form>
+      </Row>
+    </Container>
   );
 };
 

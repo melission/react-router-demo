@@ -42,7 +42,7 @@ const Book = () => {
                 <div className="error-text">Sorry, there seems to be a mistake in fetching a book. Try again, please</div>
             </Row>
             <Row>
-                <img className="error-image" src={error404}></img>
+                <img className="error-image" src={error404} alt='no book of your request was found'></img>
             </Row>
         </Container>
 
