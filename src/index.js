@@ -13,6 +13,7 @@ import Book from "./books/Book";
 import Factory from './Factory';
 import Login from './login/Login';
 import IdeaGenerator from './leisureIdeas/IdeaGenerator';
+import MainPage from './main';
 
 
 const AppLayout = ({ children }) => (
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         <ErrorPage />
       </AppLayout>,
     children: [
+      {
+        index: true,
+        element: <MainPage />
+      },
       {
         path: "category/",
         element: <Category />,
