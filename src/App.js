@@ -26,14 +26,13 @@ function App() {
       <Navbar bg={navbarBG} variant={navbarBG}>
         <Container>
           <Navbar.Brand><Link style={{ color: 'inherit' }} to={`/`}><HomeIcon /></Link></Navbar.Brand>
-          <Nav className="me-auto ">
+          <Nav className="mx-auto">
             <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`/category/`}>Category</Link></Nav.Link>
             <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`products`}>Products</Link></Nav.Link>
             <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`factory`}>Factory</Link></Nav.Link>
             <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`login`}>Log in</Link></Nav.Link>
           </Nav>
           <Box>
-            {/* <div className='themeName'>{theme.palette.mode} mode</div> */}
             <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
               {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
@@ -41,7 +40,6 @@ function App() {
         </Container>
 
       </Navbar>
-      {/* <ToggleColorMode /> */}
       <Outlet />
     </Box>
   );
