@@ -27,6 +27,7 @@ function App() {
         <Container>
           <Navbar.Brand><Link style={{ color: 'inherit' }} to={`/`}><HomeIcon /></Link></Navbar.Brand>
           <Nav className="mx-auto">
+            <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`/`}>Main</Link></Nav.Link>
             <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`/category/`}>Category</Link></Nav.Link>
             <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`products`}>Products</Link></Nav.Link>
             <Nav.Link><Link className="text-decoration-none" style={{ color: 'inherit' }} to={`factory`}>Factory</Link></Nav.Link>
