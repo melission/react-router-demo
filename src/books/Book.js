@@ -8,6 +8,7 @@ import Row from "react-bootstrap/esm/Row";
 import Button from "react-bootstrap/esm/Button"
 import error404 from "../images/404.png"
 import { Link } from "react-router-dom";
+import Rating from '@mui/material/Rating';
 
 function getRandomRating(min, max) {
     min = Math.ceil(min);
@@ -28,7 +29,7 @@ const Book = () => {
                 <h1 className="book-block_title">{book.bookName}</h1>
                 <h3 className="book-block_author">{book.authorName}</h3>
                 <Row className="book-block_rating">
-                    <div>The book rating: <strong>{rating}</strong>, based on <strong>{reviewNumber}</strong> reviews.</div>
+                    <div>The book rating: <Rating style={{ margin: "10px" }} name="read-only" value={rating} readOnly /> based on <strong>{reviewNumber}</strong> reviews.</div>
                     <div>[all the numbers are generated randomly]</div>
                 </Row>
                 <Row>
