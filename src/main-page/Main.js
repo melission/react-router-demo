@@ -2,6 +2,7 @@ import React from "react";
 import GridWithHoverBorders from "./Grid/Grid";
 import ResourceBlock from "./Resources";
 import UselessFactWidget from "./UselessFactWidget";
+import TimeWidget from "./TimeWidget";
 
 const MainPage = () => {
 
@@ -11,7 +12,7 @@ const MainPage = () => {
         <>
             <div class="grid grid-cols-1 md:grid-cols-3 mt-4 grid-rows-4 gap-4 h-[80vh] w-full gap-y-2 p-3">
                 <div class="box row-span-2 h-full">{firstDiv}</div>
-                <div class="box row-start-3 h-full">2</div>
+                <div class="box row-start-3 h-full"><TimeWidget /></div>
                 <div class="box row-start-4 h-full flex items-center justify-center"><UselessFactWidget /></div>
                 <div class="box row-span-4 h-full bg-red-50">4</div>
                 <div class="box row-span-2 h-full flex items-center justify-center"><GridWithHoverBorders /></div>
