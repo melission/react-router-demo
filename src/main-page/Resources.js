@@ -5,7 +5,7 @@ import StyledItem from "./StyledItem";
 
 const ResourceBlock = () => {
     const desc = 'The site was created using following resources: '
-    const resourceList = ['https://www.flaticon.com/', 'https://chat.openai.com/']
+    const resourceList = ['https://www.flaticon.com/free-stickers/', 'https://chat.openai.com/']
     return (
         <Box>
             {desc}
