@@ -1,0 +1,13 @@
+.grid-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-cell:hover {
+    transform: scale(1.1);
+}
