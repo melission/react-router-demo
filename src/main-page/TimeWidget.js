@@ -6,7 +6,7 @@ const StyledClocks = styled(Paper)(({ theme }) => ({
     backgroundImage: theme.palette.mode === 'dark'
         ? 'linear-gradient(to top, #30cfd0 0%, #330867 100%)'
         : 'linear-gradient(to top, #a8edea 0%, #fed6e3 100%)',
-    ...theme.typography.h1,
+    ...theme.typography.h3,
     padding: theme.spacing(5),
     textAlign: 'center',
     color: theme.palette.text.secondary,
