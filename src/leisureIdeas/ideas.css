@@ -53,10 +53,11 @@
     }
 
     .idea-button {
-        position: absolute;
+        /* position: absolute;
         width: 30%;
         height: 3.5rem;
         bottom: 13%;
-        left: 35%;
+        left: 35%; */
+        height: 3.5rem;
     }
 }
