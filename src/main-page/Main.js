@@ -3,6 +3,7 @@ import GridWithHoverBorders from "./Grid/Grid";
 import ResourceBlock from "./Resources";
 import UselessFactWidget from "./UselessFactWidget";
 import TimeWidget from "./TimeWidget";
+import IdeaGenerator from "../leisureIdeas/IdeaGenerator";
 
 const MainPage = () => {
 
@@ -14,7 +15,7 @@ const MainPage = () => {
                 <div class="box row-span-2 h-full">{firstDiv}</div>
                 <div class="box row-start-3 h-full"><TimeWidget /></div>
                 <div class="box row-start-4 h-full flex items-center justify-center"><UselessFactWidget /></div>
-                <div class="box row-span-4 h-full bg-red-50">4</div>
+                <div class="box row-span-4 h-full"><IdeaGenerator /></div>
                 <div class="box row-span-2 h-full flex items-center justify-center"><GridWithHoverBorders /></div>
                 <div class="box h-full">6</div>
                 <div class="box h-full flex items-center justify-center" ><ResourceBlock /></div>
