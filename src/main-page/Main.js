@@ -11,7 +11,7 @@ const MainPage = () => {
     const firstDiv = `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius vitae ipsum et commodo. In scelerisque est magna, ut fringilla purus congue eu. Mauris id metus ac metus porta aliquet”`
 
     return (
-        <div class="overflow-y-auto md:overflow-hidden">
+        <div class="overflow-y-auto md:overflow-x-hidden">
             <div class="grid grid-cols-1 md:grid-cols-3 mt-4 grid-rows-4 gap-4 md:h-[80vh] w-full gap-y-2 p-3">
                 <div class="box row-span-2 h-full">{firstDiv}</div>
                 <div class="box row-start-3 h-full"><TimeWidget /></div>
